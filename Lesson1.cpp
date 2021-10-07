@@ -20,10 +20,7 @@ int find_color(int k2, int i2) {
         return res2;
     }
     else
-    {
-        int res = find_color(k2 - 1, half - i2 + 1);
-        return res;
-    }
+         return find_color(k2 - 1, half - i2 + 1);
 }
 
 
