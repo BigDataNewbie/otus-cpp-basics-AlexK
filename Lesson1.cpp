@@ -10,15 +10,7 @@ int find_color(int k2, int i2) {
     }
     int half = exp2(k2-2);
     if(i2 > half)
-    {
-        int res = find_color(k2 - 1, i2 - half);
-        int res2;
-        if(res == 9)
-            res2 = 0;
-        else
-            res2 = res + 1;
-        return res2;
-    }
+         return (find_color(k2 - 1, i2 - half) == 9)? 0:(find_color(k2 - 1, i2 - half) + 1);
     else
          return find_color(k2 - 1, half - i2 + 1);
 }
